@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 import './NavigationBar.css';
 
 function NavigationBar() {
+  const mainMenuTag = [
+    {name: "모의면접", subMenu:["면접보기","나의 면접결과 보기"]},
+    {name: "스터디그룹", subMenu:["화상회의하기","그룹만들기","그룹 신청하기"]},
+    {name: "커뮤니티", subMenu:["자유게시판", "면접게시판","취업게시판","스터디그룹모집게시판"]},
+    {name: "고객센터", subMenu:["건의/질의하기","자주묻는 질문", "공지사항"]}
+  ]
+
+  const myPageSubMenu = {
+    name:"마이페이지", subMenu:["정보 수정","면접 결과","내가 쓴글", "나의 스터디 그룹", "로그아웃", "회원 탈퇴"]
+  }
 
   const [showProductsMenu, setShowProductsMenu] = useState(false);
 
@@ -108,7 +118,8 @@ function NavigationBar() {
         </ul>
       </div>
       <div className="nav_itme_right">
-        <p>사람로고</p>
+        <Link to="/products/shoes"  className="nav-link">로그인</Link>
+        <Link to="/products/shoes"  className="nav-link">마이메뉴</Link>
       </div>
     </nav>
   );
