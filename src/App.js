@@ -18,11 +18,69 @@ import { useState } from 'react';
 
 function App() {
   const sections = [
-    { title: '가상면접', url: '#',submenu:['면접시작하기','결과 확인','질문리스트 확인'] },
-    { title: '스터디그룹', url: '#', submenu:['화상회의 시작','그룹 생성','그룹 참여','그룹 목록확인'] },
-    { title: '커뮤니티', url: '#',submenu:['자유게시판','면접게시판','취업게시판','스터디그룹모집게시판'] },
-    { title: '마이페이지', url: '#',submenu:['정보 수정','나의 면접','내가 쓴 글','나의 스터디그룹',"회원 탈퇴"] },
-    { title: '문의하기', url: '#', submenu:['문의사항','건의사항','공지사항']}
+    { title: '가상면접', url: 'interview',submenu:[
+      {
+      name: '면접시작하기', url:'/start'
+      },
+      {
+      name: '결과 확인', url:'/show'
+      },
+      {
+        name: '질문리스트 확인', url:'/checkList'
+      }]
+     },
+    { title: '스터디그룹', url: 'studygroup', submenu:[
+      {
+        name: '화상회의 시작', url:'/startVideoChat'
+      },
+      {
+        name: '그룹 생성', url:'/create'
+      },
+      {
+        name: '그룹 참여', url:'/join'
+      },
+      {
+        name: '그룹 목록확인', url:'/showGroupList'
+      }]
+     },
+    { title: '커뮤니티', url: 'community',submenu:[
+      {
+        name: '자유게시판', url:'/free'
+      },
+      {
+        name: '면접게시판', url:'/interview'
+      },
+      {
+        name: '취업게시판', url:'/jop'
+      }]
+    },
+    { title: '마이페이지', url: 'mypage',submenu:[
+      {
+        name: '정보수정', url:'/change'
+      },
+      {
+        name: '나의 면접', url:'/interview'
+      },
+      {
+        name: '내가 쓴 글', url:'/wrote'
+      },
+      {
+        name: '나의 스터디그룹', url:'/studygroup'
+      },
+      {
+        name: '회원 탈퇴', url:'/widthdrawal'
+      }] 
+    },
+    { title: '문의하기', url: 'inquiry', submenu:[{
+      name: '문의사항', url:'/a'
+    },
+    
+    {
+      name: '건의사항', url:'/b'
+    },
+    {
+      name: '공지사항', url:'/c'
+    }]}
   ];
 
 
@@ -30,7 +88,7 @@ function App() {
     <Router basename={'/'}>
       <div style={{ width: '100%', height: '100vh', overflow: 'auto' }}>
         <Header title="VI" sections={sections} />
-        <Main ></Main>
+        <Main sections={sections}></Main>
       </div>
     </Router>
     

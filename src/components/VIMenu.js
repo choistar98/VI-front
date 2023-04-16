@@ -51,15 +51,15 @@ export default function BasicMenu(props) {
         {props.submenuList.map((item, index) => (
           <MenuItem 
             key={index} 
-            onClick={() => handleMenuItemClick(item)}
+            onClick={() => handleMenuItemClick(item.name)}
             onMouseEnter={handleSubMenuMouseEnter}
             style={{color: 'black', fontSize: '20px' }}
             className="custom-menu-item"
           >
             <Link 
-              to={`/${item}`}
+              to={`${props.url}${item.url}`}
               style={{ textDecoration: 'none', color: 'inherit' }}
->{item}</Link>
+>{item.name}</Link>
           </MenuItem>
           ))}
       </Menu>

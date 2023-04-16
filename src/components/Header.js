@@ -34,7 +34,7 @@ function Header(props) {
       >
         {sections.map((section,id) => (
           <Button id={id} variant="text" size="Large">
-            <VIMenu name = {section.title} submenuList={section.submenu}/>
+            <VIMenu name = {section.title} url = {section.url} submenuList={section.submenu}/>
             {/* <Link
               underline="none"
               color="inherit"
@@ -52,10 +52,10 @@ function Header(props) {
         <IconButton>
           <SearchIcon sx={{ fontSize:"60"}}/>
         </IconButton>
-        <Button  href="/SignUp" variant="outlined" size="Large">
+        <Button  href="/SignIn" variant="outlined" size="Large">
           로그인
         </Button>
-        <Button  href="/SignIn" variant="outlined" size="Large" style={{margin:"6px"}}>
+        <Button  href="/SignUp" variant="outlined" size="Large" style={{margin:"6px"}}>
           회원가입
         </Button>
       </Toolbar>
