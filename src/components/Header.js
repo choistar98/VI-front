@@ -53,7 +53,7 @@ function Header(props) {
           <SearchIcon sx={{ fontSize:"60"}}/>
         </IconButton>
         <Button  href="/SignIn" variant="outlined" size="Large">
-          로그인
+          <a style={{ textDecoration: 'none', color: 'inherit' }} href="http://localhost:3000/login">로그인</a>
         </Button>
         <Button  href="/SignUp" variant="outlined" size="Large" style={{margin:"6px"}}>
           회원가입

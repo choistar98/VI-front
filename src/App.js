@@ -20,9 +20,6 @@ function App() {
   const sections = [
     { title: '가상면접', url: 'interview',submenu:[
       {
-      name: '면접시작하기', url:'/start'
-      },
-      {
       name: '결과 확인', url:'/show'
       },
       {
@@ -30,9 +27,6 @@ function App() {
       }]
      },
     { title: '스터디그룹', url: 'studygroup', submenu:[
-      {
-        name: '화상회의 시작', url:'/startVideoChat'
-      },
       {
         name: '그룹 생성', url:'/create'
       },

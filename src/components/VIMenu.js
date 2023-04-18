@@ -48,6 +48,17 @@ export default function BasicMenu(props) {
         onMouseLeave={handleClose}
         
       >
+        <MenuItem>
+        {
+          props.name === "가상면접" ?
+            <a style={{ textDecoration: 'none', color: 'inherit',  fontSize: '20px' }} href="http://localhost:3000/interview2">면접시작하기</a>
+          :
+          props.name === "스터디그룹" ?
+            <a style={{ textDecoration: 'none', color: 'inherit', fontSize: '20px' }} href="http://localhost:3000/home">화상회의 시작하기</a>
+          :
+            null
+        }
+      </MenuItem>
         {props.submenuList.map((item, index) => (
           <MenuItem 
             key={index} 
